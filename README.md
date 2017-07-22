@@ -3,3 +3,34 @@
 - This project use ES6 Modules in Browser, please check references below to enable the experimental js feature.
     - [ES6 Modules in Chrome Canary (M60+)](https://medium.com/dev-channel/es6-modules-in-chrome-canary-m60-ba588dfb8ab7)
     - [ECMAScript modules in browsers](https://jakearchibald.com/2017/es-modules-in-browsers/)
+
+## 『 1. stack 』
+- FILO
+- 常見應用
+    - browser history
+- spec
+    - push、pop、peak、length
+- 範例
+    - palindromes // 回文
+        - 前往後或後往前都相同
+        - 例如：racecar、bob
+        - 使用 **陣列** 模擬 // **Array.push、Array.pop**
+            - array.push
+            - array.pop
+                - 改變陣列長度
+                - 刪除陣列中最後1個元素的內容，並回傳該元素
+            - 同場加映：array.shift
+                - 與array.pop剛好相反
+                - 刪除陣列中第1個元素的內容，並回傳該元素
+        - hint
+            - ![](https://placehold.it/15/f03c15/000000?text=+) Array.push、Array.pop
+            - word
+            - rword // reverse word
+            - word === rword
+    - 用傳統prototyped based的方式實作stack class
+        - 用object來模擬： `const storage = {}`
+        - 實作重點
+            - 去除object中的屬性，delete object operator
+                - `delete object.property;`
+                - `delete object['property']; // dynamic variable as peoperty name`
+                - `delete this.storage[this.count];`
